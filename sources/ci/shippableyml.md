@@ -322,10 +322,10 @@ build:
 ```
 In the snippet above, replace the following:
 
-* `image_name` value is in the format (docker-registry-username)/(docker-registry-image-repo). For GCR and ECR, you will to specify image_name in the right format:
+* `image_name` (required) value is in the format (docker-registry-username)/(docker-registry-image-repo). For GCR and ECR, you will to specify image_name in the right format:
     *  GCR: gcr.io/(docker-registry-username)/(docker-registry-image-repo)
     *  ECR: aws_account_id.dkr.ecr.us-east-1.amazonaws.com/repo-name
-* `image_tag` is the tag for the image that you want to pull.  
+* `image_tag` (required) is the tag for the image that you want to pull.  
 * set `pull` to `true` if you want to pull this image from a docker registry and `false` if the image is already on the build machine and doesn't need to be pulled from a registry.
 * In the `env` section, you can enter any environment variables you want to be set inside your CI container.
 * In the `options` tag, enter any docker options you want to use in the `docker run` command. You also need to include the HOME environment variable as shown if it is not already set in your image.
